@@ -1,5 +1,6 @@
 package br.com.dbserver.utils;
 
+import br.com.dbserver.webdrivers.DriverManager;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.MediaEntityModelProvider;
 import com.aventstack.extentreports.Status;
@@ -12,8 +13,8 @@ import java.io.IOException;
 
 public class Screenshot {
 
-        public static MediaEntityModelProvider capture(WebDriver driver) {
-        String base64image = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BASE64);
+        public static MediaEntityModelProvider capture() {
+        String base64image = ((TakesScreenshot) DriverManager.getDriver()).getScreenshotAs(OutputType.BASE64);
 
         try {
             return MediaEntityBuilder.createScreenCaptureFromBase64String(base64image).build();
