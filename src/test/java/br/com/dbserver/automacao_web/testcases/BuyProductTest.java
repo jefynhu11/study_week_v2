@@ -14,22 +14,19 @@ public class BuyProductTest extends BaseTest {
             description = "Adicionar produto ao carrinho, cadastro e compra",
             priority = 1
     )
-    public void test() throws InterruptedException {
+    public void test() {
         WebDriver driver = DriverManager.getDriver();
-        driver.get(Property.get("url2"));
+        driver.get(Property.get("url"));
 
         IndexTask indexTask = new IndexTask(driver);
-//        indexTask.pesquisarProduto("Blouse")
-//                .adicionarProdutoAoCarrinho()
-//                .resumoDaCompra()
-//                .realizarCadastrar()
-//                .confirmarEndereco()
-//                .definirRemessa()
-//                .realizarPagamento()
-//                .desconectar();
-
-        indexTask.pequisarGoogle();
-        Thread.sleep(3000);
+        indexTask.pesquisarProduto("Blouse")
+                .adicionarProdutoAoCarrinho()
+                .resumoDaCompra()
+                .realizarCadastrar()
+                .confirmarEndereco()
+                .definirRemessa()
+                .realizarPagamento()
+                .desconectar();
     }
 
 }
