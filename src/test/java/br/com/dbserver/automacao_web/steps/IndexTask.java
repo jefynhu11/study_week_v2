@@ -81,16 +81,5 @@ public class IndexTask {
         return this;
     }
 
-    //=======================================================================================================
-
-    public void pequisarGoogle() throws InterruptedException {
-        ExtentTestManager.getTest().log(Status.INFO, "A navegador está abrindo e a pagina GOOGLE");
-        indexAppObjects.pesquisarTextField().clear();
-        indexAppObjects.pesquisarTextField().sendKeys("TESTE");
-        Thread.sleep(3000);
-        indexAppObjects.pesquisarButton().click();
-    }
-
-
 }
 
