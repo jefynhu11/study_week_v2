@@ -145,14 +145,4 @@ public class IndexAppObjects {
         return wait.visibilityOf(By.xpath("//div[@id='center_column']/h1"));
     }
 
-//-------------------------------------------------------------------------------------------------------------------
-
-    public WebElement pesquisarTextField() {
-        return driver.findElement(By.name("q"));
-    }
-
-    public WebElement pesquisarButton() {
-        return driver.findElement(By.name("btnK"));
-    }
-
 }
